@@ -1,21 +1,20 @@
+<?php 
+    # Variables
+    $name = $_GET['user-name'];
+    $email = $_GET['user-email'];
+    $age = $_GET['user-age'];
+?>
+
 <DOCTYPE! html>
 <html>
-    <head>
-
-    </head>
     <body>
-        <div>
-        <?php 
-            $name = $_POST['user-name'];
-            $email = $_POST['user-email'];
-            $age = $_POST['user-age'];
+        
+    
+    <?php
+    echo "<h1>Your name is $name</h1><br>";
+    echo "<h1>Your email is $name</h1><br>";
+    echo "<h1>Your age is $name</h1><br>";
+    ?>
 
-            echo "Your name is $name" ; 
-            echo("Your email is $email");
-            echo "Your age is $age";
-         
-        ?>
-        </div>
     </body>
-
 </html>

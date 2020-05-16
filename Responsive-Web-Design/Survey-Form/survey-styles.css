@@ -1,1 +1,68 @@
 /*Styles go here*/
+
+body {
+    background-color: #FFEBCD;
+}
+
+
+#project-bar {
+    display: flex;
+    background-color: rgba(139,69,19,0.9);
+    color: #FFFFFF;
+    justify-content: space-around;
+}
+
+main {
+    display: grid;
+    grid-template-areas: 
+    'header' 'form' 'img';
+    grid-gap: 1em;
+}
+
+#header-wrapper {
+    grid-area: 'header';
+    display: grid;
+    grid-template-areas: 'title' 'text';
+    align-items: center;
+    text-align: center;
+    margin-top: 1em;
+    background-color: white;
+}
+
+#title {
+    grid-area: 'title';
+    text-transform: capitalize;
+    padding: 0.5em 0;
+    margin: 0;
+}
+
+#description {
+    grid-area: 'text';
+    padding: 0.25em 0;
+    margin: 0;
+}
+
+#form-wrapper {
+    grid-area: 'form';
+    border: 3px solid yellow;
+}
+
+/* Form Styles */
+
+.proper-box {
+    width: 15%;
+    text-align: center;
+    margin-right: 10em;
+}
+
+
+/**/
+#img-wrapper {
+    grid-area: 'img';
+    height: 20%;
+}
+
+#coffee-img {
+    width: 100%;
+    height: auto;
+}

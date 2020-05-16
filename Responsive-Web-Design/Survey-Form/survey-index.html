@@ -20,39 +20,39 @@
         </header>
 
         <main>
-            <header>
-                <h1 id="title">Are you a true coffee connoisseur?</h1>
+            <header id="header-wrapper">
+                <h1 id="title">Are you a <em>true</em> coffee connoisseur?</h1>
                 <!--how many cups of coffee 0-10, how do you drink your coffee, 
                     do you drink black, lots of cream, espresso only all that apply-->
-                <p id="description">Take our coffee survey to see how you stack up against other coffee drinkers</p>
+                <p id="description">Take our coffee survey to see how you stack up against other coffee drinkers. ☕</p>
             </header>
 
             <div id=form-wrapper>
                 <form id="survey-form" action="submission.php" autocomplete="on"
-                      method="POST">
+                      method="GET">
                     <fieldset id="coffee-enthusiast">
                         <legend>Housekeeping items</legend>
 
-                        <label id="name-label" for="name">Name:</label>
-                        <input id="name" name="user-name" type="text" 
+                        <label id="name-label" for="name">Full Name:</label>
+                        <input id="name" class="proper-box" name="user-name" type="text" 
                             pattern="(\D+)\s(\D+)" placeholder="John Smith">
 
-                        <label id="email-label" for="email">Email:</label>
-                        <input id="email" name="user-email" type="email" 
-                            placeholder="john.smith@gmail.com">
+                        <label id="email-label" for="email">Email Address:</label>
+                        <input id="email" class="proper-box" name="user-email" 
+                               type="email" placeholder="john.smith@gmail.com">
 
-                        <label id="number-label" for="age">Age:</label>
-                        <input id="age" name="user-age" type="number" 
-                            min="1" max="150" step="1"
-                            placeholder="45">
+                        <label id="number-label" for="age">Current Age:</label>
+                        <input id="age" class="proper-box" name="user-age" 
+                               type="number" min="1" max="150" step="1"
+                               placeholder="45">
                     </fieldset>
 
                     <fieldset id="coffee-place">
                         <legend>Where do you get your coffee?</legend>
 
                         <label id="datalist-label" for="dropdown-list"></label>
-                        <input id="dropdown-list" name="dropdown-list" type="text" 
-                            placeholder="Select Option" list="dropdown">
+                        <input id="dropdown-list" class="proper-box" name="dropdown-list"
+                               type="text" placeholder="Select Option" list="dropdown">
                         <datalist id="dropdown">
                             <option value="Local Coffee Shop"></option>
                             <option value="Large Coffee Chain (Starbucks, Dutch Bros, etc.)"></option>
@@ -158,6 +158,10 @@
                     <input id="submit" type="submit" name="submit-me">
                     
                 </form>
+            </div>
+
+            <div id="img-wrapper">
+                <img id="coffee-img" src="coffee-photo.png" alt="Picturesque Coffee Photo with latte art">
             </div>
         </main>
 

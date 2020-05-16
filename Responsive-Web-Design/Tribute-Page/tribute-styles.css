@@ -1,0 +1,116 @@
+body {
+    background-color: hsl(180,100%,97%);
+}
+
+/*Navigation Bar Styles*/
+#project-bar {
+    color: white;
+    font-weight: 800;
+    background: black;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+#title-bar {
+    display: grid;
+    grid-template-areas: 'title';
+    text-align: center;
+}
+
+#title-bar p { 
+    position: relative;
+    bottom: 50%;
+}
+
+#img-div {
+    display: block;
+    background-color: white;;
+}
+
+figure {
+    background-color: rgba(50,50,50,0.12);
+    position: relative;
+    padding: auto;
+    margin: auto;
+    width: 80%;
+    justify-self: center;
+}
+
+#image {
+    display: block;
+    margin: 0 auto 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+#img-caption {
+    padding: 0.5em 0 0.5em 0;
+    text-align: center;
+}
+
+#tribute-info { /*Right side of column*/
+    display: grid;
+    width: 100%;
+    margin: auto;
+}
+/*Timeline title*/
+h2 {
+    display: block;
+    text-decoration: underline;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#tribute-timeline {
+    display: grid;
+    grid-template-rows: repeat(11, 1fr);
+    grid-row-gap: 0.2em;;
+    list-style-type: none;
+    width: 80%;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+#tribute-timeline > li {
+    width: 40%;
+    justify-self: center;
+    align-self: center;
+    padding: 0.2rem 0 0.2rem 2rem;
+    background-image: url(https://clipartmag.com/images/animated-guitar-clipart-26.jpg);
+    background-position: 0 0;
+    background-size: 1.6rem 1.6rem;
+    background-repeat: no-repeat;
+    border: solid 3px black;
+    background-color: white;;
+}
+
+#footer {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 0.5em;;
+}
+
+#footer > p {
+    margin: 0;
+}
+
+#footer > p > a:link {
+    color: black;
+}
+
+#footer > p > a:visited {
+    color: black;
+}
+
+#footer > p > a:hover {
+    color: blue;
+}
+
+#footer > p > a:active {
+    color: red;
+}

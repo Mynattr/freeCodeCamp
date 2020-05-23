@@ -4,9 +4,10 @@
         <meta title="Survey Form Practice Exercise">
         <meta charset="UTF-8">
         <meta name="author" content="Mynatt Productions"> 
+        <meta name="description" content="Write description of site here">
         <meta name="viewport" content="width=device-width, initial-scale = 1.0">
 
-        <link rel="stylesheet" href="survey-styles.css">
+        <link rel="stylesheet" href="survey-styles.css" hreflang="en">
         <!--
         <script defer src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
         -->
@@ -27,11 +28,11 @@
                 <p id="description">Take our coffee survey to see how you stack up against other coffee drinkers. ☕</p>
             </header>
 
-            <div id=form-wrapper>
+            <div id="form-wrapper">
                 <form id="survey-form" action="submission.php" autocomplete="on"
                       method="GET">
                     <fieldset id="coffee-enthusiast">
-                        <legend>Housekeeping items</legend>
+                        <legend style="text-decoration: underline;">Housekeeping items</legend>
 
                         <label id="name-label" for="name">Full Name:</label>
                         <input id="name" class="proper-box" name="user-name" type="text" 
@@ -46,7 +47,7 @@
                                type="number" min="1" max="150" step="1"
                                placeholder="45">
                     </fieldset>
-
+                    <br>
                     <fieldset id="coffee-place">
                         <legend>Where do you get your coffee?</legend>
 
@@ -62,7 +63,7 @@
                             <option value="Coffee Roaster"></option>
                         </datalist>
                     </fieldset>
-
+                    <br>
                     <fieldset id="coffee-days">
                         <legend>How many days a week do you drink coffee?</legend>
 
@@ -88,8 +89,7 @@
                         <input id="seven-days" name="coffee-day-group" type="radio"
                             value="7">
                     </fieldset>
-
-
+                    <br>
                     <fieldset id="coffee-cups">
                         <legend>How many cups of coffee do you drink daily?</legend>
 
@@ -106,39 +106,39 @@
                         <input id="" name="coffee-cup-group" type="radio"
                             value="4+">
                     </fieldset>
-
+                    <br>
                     <fieldset id="coffee-ingredients">
                         <legend>How do you make your coffee?</legend>
 
                         <label for="cow-milk">Cow's Milk</label> <!---->
-                        <input id="cow-milk" name="coffee-ingredient-group" type="checkbox" 
+                        <input id="cow-milk" name="coffee-ingredient-group[]" type="checkbox" 
                             value="cow-milk">
                         <label for="almond-milk">Almond Milk</label>
-                        <input id="almond-milk" name="coffee-ingredient-group" type="checkbox" 
+                        <input id="almond-milk" name="coffee-ingredient-group[]" type="checkbox" 
                             value="almond-milk">
                         <label for="cashew-milk">Cashew Milk</label>
-                        <input id="cashew-milk" name="coffee-ingredient-group" type="checkbox" 
+                        <input id="cashew-milk" name="coffee-ingredient-group[]" type="checkbox" 
                                 value="cashew-milk">
                         <label for="soy-milk">Soy Milk</label>
-                        <input id="soy-milk" name="coffee-ingredient-group" type="checkbox" 
+                        <input id="soy-milk" name="coffee-ingredient-group[]" type="checkbox" 
                             value="soy-milk">
                         <label for="coconut-milk">Coconut Milk</label>
-                        <input id="coconut-milk" name="coffee-ingredient-group" type="checkbox" 
+                        <input id="coconut-milk" name="coffee-ingredient-group[]" type="checkbox" 
                             value="coconut-milk">
                         <label for="cream">Cream/Creamer</label>
-                        <input id="cream" name="coffee-ingredient-group" type="checkbox" 
+                        <input id="cream" name="coffee-ingredient-group[]" type="checkbox" 
                             value="cream">
                         <label for="sugar">Sugar</label>
-                        <input id="sugar" name="coffee-ingredient-group" type="checkbox" 
+                        <input id="sugar" name="coffee-ingredient-group[]" type="checkbox" 
                             value="sugar">
                         <label for="cinnamon">Cinnamon</label>
-                        <input id="cinnamon" name="coffee-ingredient-group" type="checkbox" 
+                        <input id="cinnamon" name="coffee-ingredient-group[]" type="checkbox" 
                             value="cinnamon">
                         <label for="other">Other</label>
-                        <input id="other" name="coffee-ingredient-group" type="checkbox" 
+                        <input id="other" name="coffee-ingredient-group[]" type="checkbox" 
                             value="other"> <!--Is it possible to make a textarea appear when this box is checked-->
                     </fieldset>
-
+                    <br>
                     <fieldset id="tips-entry">
                         <legend>Have any coffee tips we should know about?</legend>
                         
@@ -146,7 +146,7 @@
                         <textarea id="tips" name="tips" cols="100" 
                                 rows="5" placeholder="Add tips here"></textarea>
                     </fieldset>
-
+                    <br>
                     <fieldset id="comments-entry">
                         <legend>Any additional comments?</legend>
                         
@@ -154,7 +154,7 @@
                         <textarea id="comments" name="comments" cols="100" 
                                 rows="5" placeholder="Add comments here"></textarea>
                     </fieldset>
-
+                    <br>
                     <input id="submit" type="submit" name="submit-me">
                     
                 </form>
@@ -166,7 +166,7 @@
         </main>
 
         <footer>
-
+            &copy; Mynatt Productions
         </footer>
     </body>
 </html>

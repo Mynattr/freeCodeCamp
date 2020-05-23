@@ -26,7 +26,7 @@ main {
     align-items: center;
     text-align: center;
     margin-top: 1em;
-    background-color: white;
+    background-color: inherit;
 }
 
 #title {
@@ -44,17 +44,25 @@ main {
 
 #form-wrapper {
     grid-area: 'form';
-    border: 3px solid yellow;
+    justify-self: center;
 }
 
 /* Form Styles */
 
+#survey-form {
+    justify-items: center;
+    align-items: center;
+}
+
+#survey-form fieldset{
+    border: transparent;
+}
+
 .proper-box {
     width: 15%;
     text-align: center;
-    margin-right: 10em;
+    margin-right: 5em;
 }
-
 
 /**/
 #img-wrapper {

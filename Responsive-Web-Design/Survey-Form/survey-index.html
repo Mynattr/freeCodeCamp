@@ -8,9 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale = 1.0">
 
         <link rel="stylesheet" href="survey-styles.css" hreflang="en">
-        <!--
+
         <script defer src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-        -->
     </head>
 
     <body>
@@ -29,23 +28,23 @@
             </header>
 
             <div id="form-wrapper">
-                <form id="survey-form" action="submission.php" autocomplete="on"
-                      method="GET">
+                <form id="survey-form" action="survey-index.html" autocomplete="on"
+                      method="GET"> <!--Need to finish php file, for now have it submit data-->
                     <fieldset id="coffee-enthusiast">
                         <legend style="text-decoration: underline;">Housekeeping items</legend>
 
                         <label id="name-label" for="name">Full Name:</label>
                         <input id="name" class="proper-box" name="user-name" type="text" 
-                            pattern="(\D+)\s(\D+)" placeholder="John Smith">
+                            pattern="(\D+)\s(\D+)" placeholder="John Smith" required>
 
                         <label id="email-label" for="email">Email Address:</label>
                         <input id="email" class="proper-box" name="user-email" 
-                               type="email" placeholder="john.smith@gmail.com">
+                               type="email" placeholder="john.smith@gmail.com" required>
 
-                        <label id="number-label" for="age">Current Age:</label>
-                        <input id="age" class="proper-box" name="user-age" 
-                               type="number" min="1" max="150" step="1"
-                               placeholder="45">
+                        <label id="number-label" for="number">Current Age:</label>
+                        <input id="number" class="proper-box" name="user-age" 
+                               type="number" min="1" max="100" step="1"
+                               placeholder="45" required>
                     </fieldset>
                     <br>
                     <fieldset id="coffee-place">

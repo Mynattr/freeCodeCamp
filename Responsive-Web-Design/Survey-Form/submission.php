@@ -1,27 +1,33 @@
 <?php 
     # Variables
-    if(isset($_GET['submit'])){
+    $ingredients == Array();
 
-        $ingredients == '';
+        if(isset($_GET['submit'])){
 
-        if(!empty($_GET['coffee-ingredient-group'])) {    
-            foreach($_GET['coffee-ingredient-group'] as $value) {
-                if($ingredients=='') {
-                    $ingredients == $value;
-                } else {
-                    $ingredients .= ', '.$value;
+            if(!empty($_GET['coffee-ingredient-group'])) {  
+
+                foreach($_GET['coffee-ingredient-group'] as $value) {
+
+                    if(sizeof($GLOBALS['ingredients'])==0) {
+                        $GLOBALS['ingredients'][0] == $value;
+                    } else {
+                        Arraypush($GLOBALS['ingredients'], $value);
+                    }
+
                 }
+
             }
+
         }
-    }
-        $name = $_GET['user-name'];
-        $email = $_GET['user-email'];
-        $age = $_GET['user-age'];
-        $list = $_GET['dropdown-list'];
-        $days = $_GET['coffee-day-group'];
-        $cups = $_GET['coffee-cup-group'];
-        $tips = $_GET['tips'];
-        $comments = $_GET['comments'];
+    
+    $name = $_GET['user-name'];
+    $email = $_GET['user-email'];
+    $age = $_GET['user-age'];
+    $list = $_GET['dropdown-list'];
+    $days = $_GET['coffee-day-group'];
+    $cups = $_GET['coffee-cup-group'];
+    $tips = $_GET['tips'];
+    $comments = $_GET['comments'];
     
 ?>
 
@@ -39,6 +45,7 @@
         
     
     <?php
+    echo "Count of array is " . sizeof($ingredients) . "<br";
     echo "Here is all the information you entered:<br>";
     echo "Your name is $name<br>";
     echo "Your email is $email<br>";
